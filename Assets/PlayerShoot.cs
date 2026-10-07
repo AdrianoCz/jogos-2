@@ -36,9 +36,11 @@ public class PlayerShoot : MonoBehaviour
             Debug.LogWarning("Bullet Prefab ou Shoot Transform não foram atribuídos no Inspetor!");
             return;
         }
+        Vector3 bulletRotation = shootTransform.eulerAngles;
+        bulletRotation.x = 90;
 
-        // Instancia a bala na posição e rotação do shootTransform
-        GameObject bulletObj = Instantiate(bulletPrefab, shootTransform.position, shootTransform.rotation);
+        GameObject bulletObj = Instantiate(bulletPrefab, shootTransform.position, Quaternion.Euler(bulletRotation));
+        // Instancia a bala na posição e rotação do shootTransfor
         
         // Pega o componente BulletController da bala instanciada
         BulletController bullet = bulletObj.GetComponent<BulletController>();

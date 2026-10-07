@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8183062535210873403}
   - component: {fileID: 979625802247895061}
   - component: {fileID: 7101040083106303189}
+  - component: {fileID: 3167211989457325460}
   m_Layer: 0
   m_Name: Bala
   m_TagString: Untagged
@@ -29,13 +30,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3709635198213470396}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.71258724, y: -0, z: -0, w: 0.7015835}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -4.25081, y: 0.803, z: 0.162}
   m_LocalScale: {x: 0.111344546, y: 0.22268909, z: 0.111344546}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 90.892, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!33 &3529381203213657722
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -108,7 +109,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -156,3 +157,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BulletController
   velocity: 100
+  direction: {x: 0, y: 0, z: 0}
+--- !u!114 &3167211989457325460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3709635198213470396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 005d1550c169edf42ac2890a1dc5e37d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DeletarInimigo
